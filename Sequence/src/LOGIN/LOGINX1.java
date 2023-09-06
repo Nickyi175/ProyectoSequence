@@ -4,6 +4,7 @@
  */
 package LOGIN;
 
+import GRAFICO.MENUXZ_2;
 import javax.swing.JOptionPane;
 
 /**
@@ -138,8 +139,8 @@ public class LOGINX1 extends javax.swing.JFrame {
         if (!username.getText().isEmpty() && !password.getText().isEmpty()) {
             Player_Comprobante1 NewP = new    Player_Comprobante1();
             if (NewP.prove(username.getText(), password.getText())) {
-                MENUX_2 MenuP = new MENUX_2();
-                MenuP.setVisible(true);
+                MENUXZ_2 MENUGOD = new MENUXZ_2();
+                MENUGOD.setVisible(true);
                 dispose();
 
             } else {

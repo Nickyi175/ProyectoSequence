@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package LOGIN;
+package GRAFICO;
 
+import LOGIN.*;
+import javax.swing.JOptionPane;
 import sequence.SequenceGame;
 import sequence.SequenceGameGUI;
 
@@ -11,15 +13,16 @@ import sequence.SequenceGameGUI;
  *
  * @author MARTI
  */
-public class MENUX_2 extends javax.swing.JFrame {
+public class MENUXZ_2 extends javax.swing.JFrame {
 
     /**
      * Creates new form MENUX2
      */
-    public MENUX_2() {
+    public MENUXZ_2() {
         initComponents();
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,15 +70,65 @@ public class MENUX_2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JUGARBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUGARBActionPerformed
-       this.setVisible(false);
-       
-      SequenceGameGUI PPP=new SequenceGameGUI();
-       
-       PPP.setVisible(true);
-       
+         try {
+            SequenceGame game = new SequenceGame(1);
+
+            // Display a message while starting a new game
+            if (game.isStartingNewGame == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(null, "Loading a new game...",
+                        "Just a second", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Bye :(",
+                        "Play again!", JOptionPane.INFORMATION_MESSAGE);
+                return;  // Exit the method if the user chooses not to play again
+            }
+
+            // Start the game by making the GUI visible
+            game.gui.setVisible(true);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        // Hide the current menu window
+        this.setVisible(false);
+    
+
+    // Other variables and methods
+
+
     }//GEN-LAST:event_JUGARBActionPerformed
 
+public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MENUXZ_2().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JUGARB;

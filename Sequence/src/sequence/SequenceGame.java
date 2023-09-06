@@ -15,19 +15,19 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 public class SequenceGame {
-protected char[][] board;
-	char currentPlayerColor; 
-	char gameResult = ' ';
-	ASequencePlayer[] playerList;
-	ASequencePlayer currentPlayer;
-	String winner;
-	CardDealer Chris;
+public char[][] board;
+	public char currentPlayerColor; 
+	public char gameResult = ' ';
+	public ASequencePlayer[] playerList;
+	public ASequencePlayer currentPlayer;
+	public String winner;
+	public CardDealer Chris;
 	final char BLANK = ' ', CORNER = 'C';
-	SequenceGameGUI gui;
-	SequenceGame thisGame = this;
+	public SequenceGameGUI gui;
+	public SequenceGame thisGame = this;
 	Border empty = BorderFactory.createEmptyBorder();
-	boolean oneEyedJackIsPlayed = false;
-	int isStartingNewGame = JOptionPane.YES_OPTION;
+	public boolean oneEyedJackIsPlayed = false;
+	public int isStartingNewGame = JOptionPane.YES_OPTION;
 	// set by SequenceGameGUI:
 		//x and y coordinate of the card most recently played
 		int lastPlayedX = -1, lastPlayedY = -1;
