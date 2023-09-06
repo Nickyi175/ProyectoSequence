@@ -26,11 +26,15 @@ JPanel boardPanel, handPanel, deckPanel, playerPanel;
 	//controlled by SequenceGame, notify which card to remove from hand
 	int removedHandCardIndex;
 	
-	ImageIcon redToken = new ImageIcon(getClass().getResource("/tokens/redToken.png"));
-	ImageIcon blueToken = new ImageIcon(getClass().getResource("/tokens/blueToken.png"));
-	ImageIcon greenToken = new ImageIcon(getClass().getResource("/tokens/greenToken.png"));
-			
-		/* 
+	ImageIcon rojoToken = new ImageIcon(getClass().getResource("/tokens/rojoToken.png"));
+	ImageIcon azulToken = new ImageIcon(getClass().getResource("/tokens/azulToken.png"));
+	ImageIcon verdeToken = new ImageIcon(getClass().getResource("/tokens/verdeToken.png"));
+	ImageIcon moradoToken = new ImageIcon(getClass().getResource("/tokens/moradoToken.png"));
+        ImageIcon cafeToken = new ImageIcon(getClass().getResource("/tokens/cafeToken.png"));
+        ImageIcon negroToken = new ImageIcon(getClass().getResource("/tokens/negroToken.png"));
+	ImageIcon amarilloToken = new ImageIcon(getClass().getResource("/tokens/amarilloToken.png"));
+        ImageIcon naranjaToken = new ImageIcon(getClass().getResource("/tokens/naranjaToken.png"));
+        /* 
 		   **NO LONGER USED**, Original button naming in order
 		{
 			{new JButton("TLCorner"), new JButton("c1"), new JButton("ck"), new JButton("cq"), new JButton("c10"), new JButton("c9"), new JButton("c8"), new JButton("c7"), new JButton("c6"), new JButton("TRCorner")},
@@ -137,18 +141,38 @@ JPanel boardPanel, handPanel, deckPanel, playerPanel;
         int tbh = (int)(bh/1.2);
         
         //set tokens' size
-        Image Rimg = redToken.getImage();
+        Image Rimg = rojoToken.getImage();
 		Image RnewImg = Rimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
-		redToken = new ImageIcon(RnewImg);
+		rojoToken = new ImageIcon(RnewImg);
 
-        Image Bimg = blueToken.getImage();
+        Image Bimg = azulToken.getImage();
 		Image BnewImg = Bimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
-		blueToken = new ImageIcon(BnewImg);
+		azulToken = new ImageIcon(BnewImg);
 		
-        Image Gimg = greenToken.getImage();
+        Image Gimg = verdeToken.getImage();
 		Image GnewImg = Gimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
-		greenToken = new ImageIcon(GnewImg);
+		verdeToken = new ImageIcon(GnewImg);
         
+        Image Aimg = amarilloToken.getImage();
+		Image AnewImg = Aimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
+		amarilloToken = new ImageIcon(AnewImg);
+	
+        Image Nimg = negroToken.getImage();
+		Image NnewImg = Nimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
+		negroToken = new ImageIcon(NnewImg);
+	
+        Image Mimg = moradoToken.getImage();
+		Image MnewImg = Mimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
+		moradoToken = new ImageIcon(MnewImg);
+                
+	Image Animg = naranjaToken.getImage();
+		Image AnnewImg = Animg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
+		naranjaToken = new ImageIcon(AnnewImg);
+                
+	Image Cimg = cafeToken.getImage();
+		Image CnewImg = Cimg.getScaledInstance(tbw, tbh, java.awt.Image.SCALE_SMOOTH);
+		cafeToken = new ImageIcon(CnewImg);
+	
 		//add cards to the board 
         for(int i=0; i<10; i++)
         	for(int j=0; j<10; j++) {
@@ -233,9 +257,15 @@ JPanel boardPanel, handPanel, deckPanel, playerPanel;
         						game.board[b.i][b.j] = color;
         						//2. display player token
         						switch(color) {
-        							case 'r': t.setIcon(redToken); t.setDisabledIcon(redToken); break;
-        							case 'b': t.setIcon(blueToken); t.setDisabledIcon(blueToken); break;
-        							case 'g': t.setIcon(greenToken); t.setDisabledIcon(greenToken); break;
+        							case 'r': t.setIcon(rojoToken); t.setDisabledIcon(rojoToken); break;
+        							case 'b': t.setIcon(azulToken); t.setDisabledIcon(azulToken); break;
+        							case 'g': t.setIcon(verdeToken); t.setDisabledIcon(verdeToken); break;
+                                                                case 'p': t.setIcon(moradoToken); t.setDisabledIcon(moradoToken); break;
+        							case 'y': t.setIcon(amarilloToken); t.setDisabledIcon(amarilloToken); break;
+        							case 'c': t.setIcon(cafeToken); t.setDisabledIcon(cafeToken); break;
+                                                                case 'n': t.setIcon(negroToken); t.setDisabledIcon(negroToken); break;
+        							case 'o': t.setIcon(naranjaToken); t.setDisabledIcon(naranjaToken); break;
+        							
         						}
         						//3. reset all disabled icons
         						makeAllDisabledCardsNormal();

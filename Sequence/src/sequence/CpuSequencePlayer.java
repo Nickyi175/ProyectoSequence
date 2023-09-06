@@ -54,15 +54,31 @@ Random r = new Random();
 							//no token found at this location, 1/80 chance to be selected
 							game.board[i][j] = playerColor;
 							switch(playerColor) {
-							case 'r': gui.tokenButtons[i][j].setIcon(gui.redToken); 
-									  gui.tokenButtons[i][j].setDisabledIcon(gui.redToken); 
+							case 'r': gui.tokenButtons[i][j].setIcon(gui.rojoToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.rojoToken); 
 									  break;
-							case 'b': gui.tokenButtons[i][j].setIcon(gui.blueToken); 
-									  gui.tokenButtons[i][j].setDisabledIcon(gui.blueToken); 
+							case 'b': gui.tokenButtons[i][j].setIcon(gui.azulToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.azulToken); 
 									  break;
-							case 'g': gui.tokenButtons[i][j].setIcon(gui.greenToken); 
-									  gui.tokenButtons[i][j].setDisabledIcon(gui.greenToken);
-							}
+							case 'g': gui.tokenButtons[i][j].setIcon(gui.verdeToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.verdeToken);
+                                                                          break;
+							case 'p': gui.tokenButtons[i][j].setIcon(gui.moradoToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.moradoToken); 
+									  break;
+							case 'y': gui.tokenButtons[i][j].setIcon(gui.amarilloToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.amarilloToken); 
+									  break;
+							case 'c': gui.tokenButtons[i][j].setIcon(gui.cafeToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.cafeToken);
+                                                                          break;
+							case 'n': gui.tokenButtons[i][j].setIcon(gui.negroToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.negroToken); 
+									  break;
+							case 'o': gui.tokenButtons[i][j].setIcon(gui.naranjaToken); 
+									  gui.tokenButtons[i][j].setDisabledIcon(gui.naranjaToken); 
+									  break;
+							   }
 							hand.remove(index);
 							game.lastPlayedX = i;
 							game.lastPlayedY = j;
@@ -82,15 +98,32 @@ Random r = new Random();
 					if(choice==0) {
 						game.board[x1][y1] = playerColor;
 						switch(playerColor) {
-						case 'r': gui.tokenButtons[x1][y1].setIcon(gui.redToken); 
-								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.redToken); 
+						case 'r': gui.tokenButtons[x1][y1].setIcon(gui.rojoToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.rojoToken); 
 								  break;
-						case 'b': gui.tokenButtons[x1][y1].setIcon(gui.blueToken); 
-								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.blueToken); 
+						case 'b': gui.tokenButtons[x1][y1].setIcon(gui.azulToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.azulToken); 
 								  break;
-						case 'g': gui.tokenButtons[x1][y1].setIcon(gui.greenToken); 
-								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.greenToken);
-						}//switch
+						case 'g': gui.tokenButtons[x1][y1].setIcon(gui.verdeToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.verdeToken);
+                                                                  break;
+						case 'p': gui.tokenButtons[x1][y1].setIcon(gui.moradoToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.moradoToken); 
+								  break;
+						case 'y': gui.tokenButtons[x1][y1].setIcon(gui.amarilloToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.amarilloToken); 
+								  break;
+						case 'c': gui.tokenButtons[x1][y1].setIcon(gui.cafeToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.cafeToken);
+                                                                  break;
+						case 'n': gui.tokenButtons[x1][y1].setIcon(gui.negroToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.negroToken); 
+								  break;
+						case 'o': gui.tokenButtons[x1][y1].setIcon(gui.naranjaToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.naranjaToken); 
+								  break;
+						
+                                                }//switch
 						
 						game.lastPlayedX = x1;
 						game.lastPlayedY = y1;
@@ -100,14 +133,30 @@ Random r = new Random();
 					else {
 						game.board[x2][y2] = playerColor;
 						switch(playerColor) {
-						case 'r': gui.tokenButtons[x2][y2].setIcon(gui.redToken); 
-								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.redToken); 
+						case 'r': gui.tokenButtons[x2][y2].setIcon(gui.rojoToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.rojoToken); 
 								  break;
-						case 'b': gui.tokenButtons[x2][y2].setIcon(gui.blueToken); 
-								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.blueToken); 
+						case 'b': gui.tokenButtons[x2][y2].setIcon(gui.azulToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.azulToken); 
 								  break;
-						case 'g': gui.tokenButtons[x2][y2].setIcon(gui.greenToken); 
-								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.greenToken);
+						case 'g': gui.tokenButtons[x2][y2].setIcon(gui.verdeToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.verdeToken);
+                                                                  break;
+                                                case 'p': gui.tokenButtons[x2][y2].setIcon(gui.moradoToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.moradoToken); 
+								  break;
+						case 'y': gui.tokenButtons[x2][y2].setIcon(gui.amarilloToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.amarilloToken); 
+								  break;
+						case 'c': gui.tokenButtons[x2][y2].setIcon(gui.cafeToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.cafeToken);
+                                                                  break;
+                                                case 'n': gui.tokenButtons[x2][y2].setIcon(gui.negroToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.negroToken); 
+								  break;
+						case 'o': gui.tokenButtons[x2][y2].setIcon(gui.naranjaToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.naranjaToken); 
+								  break;
 						}//switch
 
 						game.lastPlayedX = x2;
@@ -122,14 +171,30 @@ Random r = new Random();
 				else if(game.board[x1][y1]==' ') {
 						game.board[x1][y1] = playerColor;
 						switch(playerColor) {
-						case 'r': gui.tokenButtons[x1][y1].setIcon(gui.redToken); 
-								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.redToken); 
+						case 'r': gui.tokenButtons[x1][y1].setIcon(gui.rojoToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.rojoToken); 
 								  break;
-						case 'b': gui.tokenButtons[x1][y1].setIcon(gui.blueToken); 
-								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.blueToken); 
+						case 'b': gui.tokenButtons[x1][y1].setIcon(gui.azulToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.azulToken); 
 								  break;
-						case 'g': gui.tokenButtons[x1][y1].setIcon(gui.greenToken); 
-								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.greenToken);
+						case 'g': gui.tokenButtons[x1][y1].setIcon(gui.verdeToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.verdeToken);
+                                                                  break;
+						case 'p': gui.tokenButtons[x1][y1].setIcon(gui.moradoToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.moradoToken); 
+								  break;
+						case 'y': gui.tokenButtons[x1][y1].setIcon(gui.amarilloToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.amarilloToken); 
+								  break;
+						case 'c': gui.tokenButtons[x1][y1].setIcon(gui.cafeToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.cafeToken);
+                                                                  break;
+                                                case 'n': gui.tokenButtons[x1][y1].setIcon(gui.negroToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.negroToken); 
+								  break;
+						case 'o': gui.tokenButtons[x1][y1].setIcon(gui.naranjaToken); 
+								  gui.tokenButtons[x1][y1].setDisabledIcon(gui.naranjaToken); 
+								  break;
 						}//switch
 
 						game.lastPlayedX = x1;
@@ -143,15 +208,31 @@ Random r = new Random();
 				else if(game.board[x2][y2]==' ') {
 					game.board[x2][y2] = playerColor;
 					switch(playerColor) {
-					case 'r': gui.tokenButtons[x2][y2].setIcon(gui.redToken); 
-							  gui.tokenButtons[x2][y2].setDisabledIcon(gui.redToken); 
-							  break;
-					case 'b': gui.tokenButtons[x2][y2].setIcon(gui.blueToken); 
-							  gui.tokenButtons[x2][y2].setDisabledIcon(gui.blueToken); 
-							  break;
-					case 'g': gui.tokenButtons[x2][y2].setIcon(gui.greenToken); 
-							  gui.tokenButtons[x2][y2].setDisabledIcon(gui.greenToken);
-					}//switch
+                                        case 'r': gui.tokenButtons[x2][y2].setIcon(gui.rojoToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.rojoToken); 
+								  break;
+					case 'b': gui.tokenButtons[x2][y2].setIcon(gui.azulToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.azulToken); 
+								  break;
+                                	case 'g': gui.tokenButtons[x2][y2].setIcon(gui.verdeToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.verdeToken);
+                                                                  break;
+					case 'p': gui.tokenButtons[x2][y2].setIcon(gui.moradoToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.moradoToken); 
+								  break;
+					case 'y': gui.tokenButtons[x2][y2].setIcon(gui.amarilloToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.amarilloToken); 
+								  break;
+					case 'c': gui.tokenButtons[x2][y2].setIcon(gui.cafeToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.cafeToken);
+                                                                  break;
+                                        case 'n': gui.tokenButtons[x2][y2].setIcon(gui.negroToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.negroToken); 
+								  break;
+					case 'o': gui.tokenButtons[x2][y2].setIcon(gui.naranjaToken); 
+								  gui.tokenButtons[x2][y2].setDisabledIcon(gui.naranjaToken); 
+								  break;
+						}//switch
 
 					game.lastPlayedX = x2;
 					game.lastPlayedY = y2;
