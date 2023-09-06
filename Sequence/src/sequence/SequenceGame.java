@@ -513,7 +513,7 @@ public char[][] board;
 			}
 			
 			//assign player color
-			JList<ImageIcon> list = new JList<ImageIcon>(new ImageIcon[] {gui.rojoToken, gui.azulToken, gui.verdeToken,gui.amarilloToken,gui.cafeToken,gui.moradoToken,gui.naranjaToken,gui.negroToken});
+			JList<ImageIcon> list = new JList<ImageIcon>(new ImageIcon[] {gui.rojoToken, gui.azulToken, gui.verdeToken,gui.moradoToken,gui.amarilloToken,gui.cafeToken,gui.negroToken,gui.naranjaToken});
 			JOptionPane.showMessageDialog(
 			  gui, list, "Please choose your color", JOptionPane.PLAIN_MESSAGE);
 			
@@ -526,31 +526,38 @@ public char[][] board;
 			}
 			
 			switch(list.getSelectedIndex()) {
-				case 0: 
-					human.playerColor = 'r';
-					cpu.selectColor(0);
-				break;
-				case 1: human.playerColor = 'b'; 
-					cpu.selectColor(1);
-				break;
-				case 2: human.playerColor = 'g'; 
-					cpu.selectColor(2);
-				break;
-                                case 3: human.playerColor = 'p'; 
-					cpu.selectColor(3);
-                                break;
-                                case 4: human.playerColor='y';
-                                        cpu.selectColor(4);
-                                break;
-                                case 5: human.playerColor='c';
-                                        cpu.selectColor(5);
-                                break;
-                                case 6: human.playerColor='n';
-                                        cpu.selectColor(6);
-                                break;
-                                case 7: human.playerColor='o';
-                                        cpu.selectColor(7);
-                                break;
+				case 0 -> {
+                                    human.playerColor = 'r';
+                                    cpu.selectColor(0);
+                        }
+				case 1 -> {
+                                    human.playerColor = 'b';
+                                    cpu.selectColor(1);
+                        }
+				case 2 -> {
+                                    human.playerColor = 'g';
+                                    cpu.selectColor(2);
+                        }
+                                case 3 -> {
+                                    human.playerColor = 'p';
+                                    cpu.selectColor(3);
+                        }
+                                case 4 -> {
+                                    human.playerColor='y';
+                                    cpu.selectColor(4);
+                        }
+                                case 5 -> {
+                                    human.playerColor='c';
+                                    cpu.selectColor(5);
+                        }
+                                case 6 -> {
+                                    human.playerColor='n';
+                                    cpu.selectColor(6);
+                        }
+                                case 7 -> {
+                                    human.playerColor='o';
+                                    cpu.selectColor(7);
+                        }
                                 
 			}
 			//log players' info
@@ -667,6 +674,7 @@ public char[][] board;
 					
 				}//outer while
 			}//end of else	
+//end of else	
 		case 2:
 			break;
 		case 3:

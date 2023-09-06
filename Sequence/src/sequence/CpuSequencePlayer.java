@@ -6,7 +6,7 @@ package sequence;
 import java.util.Random;
 public class CpuSequencePlayer extends ASequencePlayer{
 Random r = new Random();
-	char[] colorSelection = {'r', 'b', 'g'};
+	char[] colorSelection = {'r', 'b', 'g','y','p','n','o','c'};
 
 	public CpuSequencePlayer(int number) {
 
@@ -265,7 +265,7 @@ Random r = new Random();
 	void selectColor(int i) {
 		int s;
 		do {
-			s = r.nextInt(3);
+			s = r.nextInt(8);
 		}while(s==i);
 		
 		playerColor = colorSelection[s];
